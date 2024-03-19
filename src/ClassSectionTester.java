@@ -180,6 +180,7 @@ public class ClassSectionTester {
     public void TestForClassSectionAddStudentAddsStudentCorrectly() {
         setUp();
         cs.addStudent(student1);
+        System.out.println(cs);
         assertEquals(1, cs.getStudents().size(), "Make sure that the add student method adds a student to the class section!");
         tearDown();
     }
@@ -188,8 +189,8 @@ public class ClassSectionTester {
     // Test 18
     public void TestForClassSectionAddStudentDoesNotAddIncorrectYearLevel() {
         setUp();
-        cs.addStudent(student2);
         assertEquals(0, cs.getStudents().size(), "Make sure that the add student method doesn't add students of a different year level than the section allows!");
+        cs.addStudent(student2);
         tearDown();
     }
 
